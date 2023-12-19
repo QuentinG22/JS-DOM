@@ -1,29 +1,50 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mon super titre</title>
 </head>
+
 <body>
 
-<div id="yield">
-    <h3>Quelques messages</h3>
-    <p>Message à conserver</p>
-    <p>Message à supprimer !</p>
-    <p>Joli message !</p>
-    <p>Vous devez supprimer ce message !</p>
-</div>
+    <div id="yield">
+        <h3>Quelques messages</h3>
+        <p>Message à conserver</p>
+        <p>Message à supprimer !</p>
+        <p>Joli message !</p>
+        <p>Vous devez supprimer ce message !</p>
+    </div>
 
-<button type="button" onclick="suppress()">Supprimer</button>
+    <button type="button" onclick="suppress()">Supprimer</button>
 
 
-<!-- À appeler dans une feuille js à part -->
-<script type="text/javascript">
+    <!-- À appeler dans une feuille js à part -->
+    <script type="text/javascript">
 
-    // Supprimer les message à supprimer ! (qui contiennent le mot "supprimer")
-    // écrire la fonction qui fera le travail de suppression lors du "click" sur le bouton
+        // Supprimer les message à supprimer ! (qui contiennent le mot "supprimer")
+        // écrire la fonction qui fera le travail de suppression lors du "click" sur le bouton
 
-</script>
+        // let yieldSelected = document.querySelector("#yield")
+        // function suppress(){
+        //     for(let i = 0; i < yieldSelected.children.length; i++){
+        //         if(yieldSelected.children[i].innerText.includes("supprimer")){
+        //             yieldSelected.children[i].remove()
+        //         }
+        //     }
+        // }
+
+        let yieldSelected = document.querySelectorAll("#yield p")
+        function suppress() {
+            for (let i = 0; i < yieldSelected.length; i++) {
+                if (yieldSelected[i].innerText.includes("supprimer")) {
+                    yieldSelected[i].remove()
+                }
+            }
+        }
+
+    </script>
 </body>
+
 </html>

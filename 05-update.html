@@ -23,10 +23,21 @@
 <!-- À appeler dans un js à part -->
 <script type="text/javascript">
     // 1 - stocker le titre dans une variable
+    let title = document.getElementsByTagName("h1");
+    console.log(title[0].innerText);
+
     // 2 - stocker le paragraphe dans une variable
+    let paragraph = document.getElementsByTagName("p");
+
     // 3 - Changer le titre "Mon titre à changer" => "<span>Mon super titre</span>"
+    title[0].innerHTML = "<span>Mon super titre</span>";
+    console.log(title[0].innerText);
+
     // 4 - Ajouter un ! à la fin du paragraphe : "voluptatem" => "voluptatem !" sans remplacer le texte
+    paragraph[0].append("!"); // équivalent à paragraph.innerText += "!"
+
     // 5 - Ajouter la classe "red" au paragraphe
+    paragraph[0].classList.add('red');
 </script>
 </body>
 </html>

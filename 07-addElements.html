@@ -1,25 +1,35 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mon super titre</title>
 </head>
+
 <body>
 
-<div id="yield">
-    <h1>Nos pizzas</h1>
-    <ul></ul>
-</div>
+    <div id="yield">
+        <h1>Nos pizzas</h1>
+        <ul></ul>
+    </div>
 
-<!-- À appeler dans une feuille js à part -->
-<script type="text/javascript">
-    let pizzas = ["5 fromages", "Montagnarde", "Tartiflette", "Marguerita supplément fromage", "Reine mozza"];
+    <!-- À appeler dans une feuille js à part -->
+    <script type="text/javascript">
+        let pizzas = ["5 fromages", "Montagnarde", "Tartiflette", "Marguerita supplément fromage", "Reine mozza"];
 
-    /*
-     * Faire une boucle sur les pizzas
-     * Ajouter chaque pizza en tant qu'élément de list dans "ul"
-     */
-</script>
+        /*
+         * Faire une boucle sur les pizzas
+         * Ajouter chaque pizza en tant qu'élément de list dans "ul"
+         */
+
+        let selected = document.querySelector("#yield ul");
+        for (let i = 0; i < pizzas.length; i++) {
+            let li = document.createElement("li");
+            li.innerText = pizzas[i];
+            selected.appendChild(li);
+        }
+    </script>
 </body>
+
 </html>

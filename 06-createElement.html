@@ -23,6 +23,14 @@
      * - une couleur marron (en modifiant directement le style de l'élément "span")
      *
      */
+
+    coffee.innerHTML = "<span>Expresso</span>";
+    coffee.children[0].classList.add("selected");
+    coffee.children[0].style.color = "brown";
+
+    let span = document.createElement("span");
+    span.innerText = "Double expresso";
+    coffee.appendChild(span)
 </script>
 </body>
 </html>

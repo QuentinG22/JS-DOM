@@ -1,36 +1,61 @@
 <!doctype html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mon super titre</title>
 </head>
+
 <body>
 
-<section>
-    <a href="www.google.com" class="one two three">
-        <b>Lorem</b> ipsum dolor sit amet, consectetur adipisicing elit. Aliquam commodi nam necessitatibus possimus qui quidem reiciendis reprehenderit sint ut. Aliquid assumenda culpa doloribus exercitationem illum iure magnam necessitatibus rem sit.
-    </a>
-</section>
+    <section>
+        <a href="www.google.com" class="one two three" data="Bonjour">
+            <b>Lorem</b> ipsum dolor sit amet, consectetur adipisicing elit. Aliquam commodi nam necessitatibus possimus
+            qui quidem reiciendis reprehenderit sint ut. Aliquid assumenda culpa doloribus exercitationem illum iure
+            magnam necessitatibus rem sit.
+            <h1 id="test">test</h1>
+            <p id="test2">Lorem, ipsum dolor.</p>
+        </a>
+    </section>
 
-<!-- À appeler dans un js à part -->
-<script type="text/javascript">
-    let link = document.querySelector('a');
+    <!-- À appeler dans un js à part -->
+    <script type="text/javascript">
+        let link = document.querySelector('a');
 
-    console.log("À partir de la variable link, afficher les informations ci-dessous");
-    console.log("-----------------------------------");
-    console.log("Afficher le contenu html :");
-    // console.log(link. );
-    console.log("-----------------------------------");
-    console.log("Afficher le texte :");
-    // console.log(link. );
-    console.log("-----------------------------------");
-    console.log("Afficher l'id :");
-    // console.log(link. );
-    console.log("-----------------------------------");
-    console.log("Afficher les classes :");
-    // console.log(link. );
-    console.log("-----------------------------------");
-</script>
+        console.log("À partir de la variable link, afficher les informations ci-dessous");
+        console.log("-----------------------------------");
+        console.log("Afficher le contenu html :");
+        console.log(link.innerHTML);
+        console.log("-----------------------------------");
+        console.log("Afficher le texte :");
+        console.log(link.innerText);
+        console.log("-----------------------------------");
+        console.log("Afficher l'id :");
+        console.log(link.id);
+        console.log("-----------------------------------");
+        console.log("Afficher les classes :");
+        console.log(link.classList);
+        console.log("-----------------------------------");
+
+        console.log(link.getAttribute("data"))
+
+        // console.log(link.childNodes[3].id)
+
+        for (let i = 0; i < link.children.length; i++) {
+            if (link.children[i].id != "") {
+                console.log(link.children[i].id)
+            }
+        }
+
+        for (let i = 0; i < link.childNodes.length; i++) {
+            if (link.childNodes[i].nodeType === 1) {
+                console.log(link.childNodes[i].nodeType)
+            } else {
+                console.log(`Ce n'est pas un nodeType 1`)
+            }
+        }
+    </script>
 </body>
+
 </html>

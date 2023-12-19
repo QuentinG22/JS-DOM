@@ -19,21 +19,40 @@
     Mon super contenu récupéré par le tag section
 </a>
 
+<p class="class-cool">
+    Mon super contenu récupéré par la classe
+</p>
+
+<a>
+    Mon super contenu récupéré par le tag section
+</a>
+
 <!-- À appeler dans un js à part -->
 <script type="text/javascript">
-    // let elementById = document. (...)
-    // let elementsByClass = document. (...)
-    // let elementsByTag = document. (...)
+    let elementById = document.getElementById("super-id");
+    let elementsByClass = document.getElementsByClassName("class-cool");
+    let elementsByTag = document.getElementsByTagName("a");
+
+    let selectorId = document.querySelector('p'); // Prend le 1er paragraphe
+    let selectorId1 = document.querySelectorAll('p'); // Prend tout les paragraphes
+    let selectorClass = document.querySelectorAll('.class-cool'); // Prend tout les éléments qui a la class .class-cool
+    let selectorTag = document.querySelectorAll('a'); // Prend tout les éléments a
 
     console.log("-----------------------------------");
     console.log("Afficher grâce à l'id :");
     console.log(elementById);
+    console.log(selectorId);
+    console.log(selectorId1[0]);
+    console.log(selectorId1[0].parentNode);
+    console.log(selectorId1[0].childNodes[0]);
     console.log("-----------------------------------");
     console.log("Afficher grâce à la class :");
     console.log(elementsByClass);
+    console.log(selectorClass);
     console.log("-----------------------------------");
     console.log("Afficher grâce à au tag :");
     console.log(elementsByTag);
+    console.log(selectorTag);
     console.log("-----------------------------------");
 </script>
 </body>
