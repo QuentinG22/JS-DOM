@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Super titre</title>
+
+    <!-- En temps normal, ce code est à mettre dans une feuille de style à part -->
+    <style type="text/css">
+        .slide {
+            width: 300px;
+            height: 130px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .black {
+            background-color: black;
+        }
+        .red {
+            background-color: red;
+        }
+        .blue {
+            background-color: blue;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div id="slider">
+    <button class="left"><-</button>
+    <div class="slide black active" data-index="0"></div>
+    <div class="slide red hidden" data-index="1"></div>
+    <div class="slide blue hidden" data-index="2"></div>
+    <button class="right">-></button>
+</div>
+
+<!--
+    Remplir le fichier image.js pour que le click sur les boutons fasse défiler les pavés de couleur.
+    Des consignes supplémentaires sont données dans image.js.
+-->
+
+<script type="text/javascript" src="images.js"></script>
+
+</body>
+</html>
